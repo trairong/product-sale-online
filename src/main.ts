@@ -8,11 +8,9 @@ async function bootstrap() {
   });
 
   const serverConfig = config.get('server');
-  if (serverConfig.env === 'development') {
-    app.enableCors();
-  } else if (serverConfig.env === 'production') {
-    app.enableCors({ origin: serverConfig.env || serverConfig.origin });
-  }
+
+  app.enableCors();
+
   app.setGlobalPrefix('api');
 
   const options = new DocumentBuilder()
