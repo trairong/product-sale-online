@@ -23,7 +23,7 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
-  await app.listen(serverConfig.port);
+  await app.listen(process.env.PORT || 4000);
   console.log('======== ENVIROMENT ========:', serverConfig.env);
   console.log('======== PORT ==============:', serverConfig.port);
   console.log('======== ORIGIN ==============:', serverConfig.origin);
