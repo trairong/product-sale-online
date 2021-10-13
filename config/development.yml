@@ -1,0 +1,13 @@
+server: 
+  
+  port: 4000
+  origin: localhost
+  env: development
+
+db:
+  host: postgresql-54220-0.cloudclusters.net
+  port: 18185
+  database: product
+  username: trairong
+  password: 65218tong
+  type: postgres
