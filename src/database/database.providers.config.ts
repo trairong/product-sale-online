@@ -2,7 +2,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import * as config from 'config';
 
 const dbConfig = config.get('db');
-console.log('process.env.NODE_ENV====:',process.env.NODE_ENV);
+console.log('process.env.NODE_ENV====:',process.env.PORT);
 export const SQLconfig: TypeOrmModule = {
   type: dbConfig.type,
   host: dbConfig.host,
